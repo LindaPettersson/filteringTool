@@ -3,9 +3,15 @@ h1, h2, h3, h4, p, a {
 	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 	color: #84a2c3;
 }
-
 a {
     color: #383d41; !important;
+}
+#view-header {
+ 	text-align: center;
+    padding: 2%;
+}
+#view-body {
+	padding-top: 3%;
 }
 
 
@@ -30,3 +36,21 @@ a {
 #startpage-buttons {
 	padding: 50px 0px 10px 0px;
 }
+
+/*** Login ***/
+#login-form {
+	margin-right: 50%;
+}
+#login-buttons {
+	text-align: center;
+} 
+
+
+/*** Choose Files ***/
+#choosefiles-step {
+	    padding: 0px 0px 30px 0px;
+}
+#step {
+	    padding: 0px 20px 0px 0px;
+}
+
