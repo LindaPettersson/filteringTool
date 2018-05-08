@@ -1,5 +1,5 @@
 /*** Global ***/
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a , th, td{
 	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 	color: #84a2c3;
 }

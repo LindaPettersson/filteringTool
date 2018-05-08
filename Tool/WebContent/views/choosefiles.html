@@ -10,14 +10,17 @@
 			</div>
 			<div id="action">
 				<p>VÄLJ STACKTRACE</p>
-				<button type="button" class="btn btn-default btn-sm">Välj fil</button>
+				<input type="file" ng-file-model="files" multiple />
 			</div>
 		</div>
 		<div class="row" id="choosefiles-step">
 			<div id="step">
 				<h1>2</h1>
 			</div>
-			<div id="action">Lista med filer...</div>
+			<div id="action">
+				<p>VALDA FILER</p>
+				<p ng-repeat="file in files">{{file.name}}</p>
+			</div>
 		</div>
 		<div class="row" id="choosefiles-step">
 			<div id="step">
@@ -25,7 +28,8 @@
 			</div>
 			<div id="action">
 				<p>TILL ÖVERSIKT</p>
-				<button type="button" class="btn btn-default btn-sm">Fortsätt</button>
+				<button type="button" class="btn btn-default btn-sm"
+					ng-click="uploadFile()">Fortsätt</button>
 			</div>
 		</div>
 	</div>
