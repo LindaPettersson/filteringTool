@@ -6,7 +6,7 @@ application.config([ '$routeProvider', function($routeProvider) {
 
 	$routeProvider.when('/home', {
 		templateUrl : './views/home.html',
-		controller  : 'loginCtrl'
+		controller  : 'startpageCtrl'
 	}).when('/login', {
 		templateUrl : './views/login.html',
 		controller : 'loginCtrl'
@@ -23,24 +23,28 @@ application.config([ '$routeProvider', function($routeProvider) {
 /** ***** Controllers ******* */
 //Start page
 application.controller('startpageCtrl', function($scope, $location) {
+	//Go to login
 	$scope.GoToLogin = function(){
 		$location.path('/login');
 	}
 });
 
 //Login
-application.controller('loginCtrl', function($scope, $http) {
+application.controller('loginCtrl', function($scope, $location) {
+	//Cancel login
+	$scope.cancelLogin = function(){
+		$location.path('./home');
+	}
 	
-	
+	//Login
 	$scope.login = function() {
-		var username = $scope.username;
-		var password = $scope.password;
+		//TODO validate input
+		//var username = $scope.username;
+		//var password = $scope.password;
 		//console.log(username + " " + password);
-//		nodeMysql.createDB();
-//		console.log('DB created!');
-//		 $http.get('/createdb').then(function(data) {
-//		        console.log(data);
-//		    });
+		
+		//TODO if ok
+		$location.path('/choosefiles');
 	};
 		
 	// TODO If user is logged in - enable openSettings
