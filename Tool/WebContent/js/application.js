@@ -58,15 +58,17 @@ application.controller('loginCtrl', function($scope, $location) {
 
 //Choose files
 application.controller('choosefilesCtrl', function($scope, $location){
-	$scope.files = []; 
-	
-	//Proceed to display files in 'Summary types'
-	$scope.uploadFile = function(){
-	    $location.path('/summarytypes');
-		
-//	    var uploadUrl = "/choosfiles";
+//	$scope.files = []; 
+//	
+//	//Proceed to display files in 'Summary types'
+//	$scope.uploadFile = function(){
+//		var uploadUrl = "/choosfiles";
 //	    fileUpload.uploadFileToUrl(file, uploadUrl);
-	};
+//		
+//	    $location.path('/summarytypes');
+//		
+//    
+//	};
 });
 
 //Summary types
@@ -85,7 +87,7 @@ application.controller('summarytypesCtrl', function($scope, $location, NgTablePa
 
 
 /*** Directives ***/
-//Choose one or more files
+//Choose one or more files and display file name(s)
 application.directive('ngFileModel', ['$parse', function ($parse) {
     return {
         restrict: 'A',

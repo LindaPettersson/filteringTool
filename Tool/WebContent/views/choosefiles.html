@@ -1,16 +1,34 @@
 <!-- Choose Files -->
 <div class="col-md-12" id="choosefiles" ng-controller="choosefilesCtrl">
 	<div id="view-header">
-		<h3>VÄLJ DE FILER DU VILL FILTRERA</h3>
+		<h3>VÄLJ STACKTRACE</h3>
 	</div>
 	<div class="col-md-8 offset-4" id="view-body">
-		<div class="row" id="choosefiles-step">
+		<form action="/api/file/upload" method="post" enctype="multipart/form-data">
+			<input name="stacktraceFile" type="file" ng-file-model="files" />
+			<!-- add 'multiple' if multiple files -->
+			<br>
+			<p ng-repeat="file in files">{{file.name}}</p>
+			<br>
+			<button type="button" class="btn btn-default btn-sm"
+					ng-click="uploadFile()">Fortsätt</button>
+		</form>
+
+
+
+
+
+
+
+		<!-- <div class="row" id="choosefiles-step">
 			<div id="step">
 				<h1>1</h1>
 			</div>
 			<div id="action">
 				<p>VÄLJ STACKTRACE</p>
-				<input type="file" ng-file-model="files" multiple />
+				<input name="stacktraceFile" type="file" ng-file-model="files"  /> add 'multiple' if multiple files
+				<br>
+				<p ng-repeat="file in files">{{file.name}}</p>
 			</div>
 		</div>
 		<div class="row" id="choosefiles-step">
@@ -18,19 +36,10 @@
 				<h1>2</h1>
 			</div>
 			<div id="action">
-				<p>VALDA FILER</p>
-				<p ng-repeat="file in files">{{file.name}}</p>
-			</div>
-		</div>
-		<div class="row" id="choosefiles-step">
-			<div id="step">
-				<h1>3</h1>
-			</div>
-			<div id="action">
 				<p>TILL ÖVERSIKT</p>
 				<button type="button" class="btn btn-default btn-sm"
-					ng-click="uploadFile()">Fortsätt</button>
+					ng-click="uploadFile()">Fortsätt</button> 
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
