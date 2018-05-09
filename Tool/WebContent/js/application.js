@@ -1,5 +1,6 @@
 var application = angular.module('FilterTool', ['ngRoute', 'ngTable']);
 
+
 /** ***** Routes ******* */
 
 application.config([ '$routeProvider', function($routeProvider) {
@@ -145,3 +146,4 @@ application.directive('ngFileModel', ['$parse', function ($parse) {
 //		multipartFrom.post(uploadUrl, $scope.stacktrace)
 //	}
 //}]);
+
