@@ -1,6 +1,6 @@
 <!-- Summary types -->
 <div ng-controller="summarytypesCtrl">
-	<table ng-table="vm.tableParams" class="table" show-filter="true">
+	<table ng-table="tableParams" class="table" show-filter="true">
 		<tr ng-repeat="type in $data">
 			<td title="'Datum'" filter="{ date: 'text'}" sortable="'date'">
 				{{type.date}}</td>

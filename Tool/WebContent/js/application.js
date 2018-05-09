@@ -71,20 +71,21 @@ application.controller('choosefilesCtrl', function($scope, $location){
 
 //Summary types
 application.controller('summarytypesCtrl', function($scope, $location, NgTableParams) {
-	//dummydata
-	var self = this;
+	//Display dummy data in table
 	var data = [
 		{date: "2018-05-08 15:14:25", name: "FileNotFound", amount: 3},
 		{date: "2018-05-08 10:11:02", name: "IdSekretess", amount: 7},
 		{date: "2018-05-07 17:00:25", name: "IdDataFinnsEj", amount: 1},
 		{date: "2018-05-06 09:14:30", name: "IllegalArgument", amount: 9},
 		];
-	self.tableParams = new NgTableParams({}, { dataset: data});
+	$scope.tableParams = new NgTableParams({}, { dataset: data});
+	
 });
 
 
 
 /*** Directives ***/
+//Choose one or more files
 application.directive('ngFileModel', ['$parse', function ($parse) {
     return {
         restrict: 'A',
@@ -119,7 +120,19 @@ application.directive('ngFileModel', ['$parse', function ($parse) {
     };
 }]);
 
-
+/**** Services *****/
+////Upload file
+//application.service('multipartForm', ['$http', function($http){
+//	this.post = function(uploadUrl, data){
+//		var fd = new FormData();
+//		for(var key in data)
+//			fd.append(key, data[key]);
+//		$http.post(uploadUrl, fd, {
+//			transformRequest: angular.indentity, //so it won´t serialize
+//			headers: {'Content-Type': undefined }
+//		})
+//	}
+//}]);
 
 
 //application.controller('choosefilesCtrl', ['$scope', 'multipartFrom',  function($scope, multipartForm){

@@ -6,6 +6,10 @@ h1, h2, h3, h4, p, a , th, td{
 a {
     color: #383d41; !important;
 }
+.table td {
+	color: #383d41; !important;
+	text-align: center;
+}
 #view-header {
  	text-align: center;
     padding: 2%;
