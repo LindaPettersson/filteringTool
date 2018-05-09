@@ -12,5 +12,9 @@
     "url": "https://github.com/LindaPettersson/filteringTool.git"
   },
   "author": "Linda Pettersson (2018)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "latest",
+    "multer": "latest"
+  }
 }
