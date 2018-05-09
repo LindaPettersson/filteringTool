@@ -58,6 +58,18 @@ application.controller('loginCtrl', function($scope, $location) {
 });
 
 //Choose files
+//application.controller('choosefilesCtrl', ['FileSaver', 'Blob', function () {
+//    
+//	//Save file from server
+//	$scope.download = function () {
+//        var myData = new Blob([text], { type: 'text/plain;charset=utf-8' });
+//        FileSaver.saveAs(myData, 'text.txt');
+//    }
+//}]);
+
+
+
+
 application.controller('choosefilesCtrl', function($scope, $location){
 //	$scope.files = []; 
 //	
